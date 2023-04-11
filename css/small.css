@@ -1,0 +1,198 @@
+@charset "utf-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+abbr[title] {
+    border-bottom: none; /* 1 */
+    text-decoration: underline; /* 2 */
+    text-decoration: underline dotted; /* 2 */
+}
+
+::-moz-selection {
+	background-color: #b3d4fc; /* 1 */
+	color: #000000; /* 1 */
+	text-shadow: none;
+}
+
+::selection {
+	background-color: #b3d4fc; /* 1 */
+	color: #000000; /* 1 */
+	text-shadow: none;
+}
+
+table {
+    border-collapse: collapse;
+}
+  
+th {
+    text-align: inherit;
+}
+
+ul {
+    padding:0;
+    margin:0;
+}
+
+ul.none {
+    list-style: none;
+}
+
+input,
+button,
+textarea {
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+@font-face {
+    font-family: 'Lovin Sans';
+    src: local('Lovin Sans'), url('../fonts/LovinSans-Regular.woff2') format('woff2'),
+        url('../fonts/LovinSans-Regular.woff') format('woff'),
+        url('../fonts/LovinSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lovin Sans';
+    src: local('Lovin Sans'), url('../fonts/LovinSans-Medium.woff2') format('woff2'),
+        url('../fonts/LovinSans-Medium.woff') format('woff'),
+        url('../fonts/LovinSans-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lovin Sans';
+    src: local('Lovin Sans'), url('../fonts/LovinSans-Bold.woff2') format('woff2'),
+        url('../fonts/LovinSans-Bold.woff') format('woff'),
+        url('../fonts/LovinSans-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lovin Sans';
+    src: local('Lovin Sans'), url('../fonts/LovinSans-Black.woff2') format('woff2'),
+        url('../fonts/LovinSans-Black.woff') format('woff'),
+        url('../fonts/LovinSans-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+    src: local('Noto Sans'), url('../fonts/NotoSans-Regular.woff2') format('woff2'),
+        url('../fonts/NotoSans-Regular.woff') format('woff'),
+        url('../fonts/NotoSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+    src: local('Noto Sans'), url('../fonts/NotoSans-Medium.ttf') format('woff2'),
+        url('../fonts/NotoSans-Medium.woff') format('woff'),
+        url('../fonts/NotoSans-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+body{
+    font-family: 'Lovin Sans', sans-serif;
+    line-height:1.5;
+    color:#242420;
+    font-weight: 400;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.dpn {
+    display: none !important;
+}
+
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;-webkit-font-smoothing:antialiased}
+*, *:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+
+
+
+@media screen and (min-width: 1023px) {
+    .header {
+        min-height: 11.45833333333333vw;
+    }
+    .main-hero {
+        min-height: 59.94791666666667vw;
+    }
+    .home-complete {
+        min-height: 70.83333333333333vw;
+    }
+    .home-diabest {
+        min-height: 85.83333333333333vw;
+    }
+    .sub-hero {
+        min-height: 67.76041666666667vw;
+    }
+    .product-content {
+        min-height: 74.21875vw;   
+    }
+    .uses-content {
+        min-height: 87.76041666666667vw;
+    }
+    .subjects-content {
+        min-height: 75.88541666666667vw;
+    }
+    .instruction-content {
+        min-height: 90.10416666666667vw;
+    }
+    .ingredient-content {
+        min-height: 95.83333333333333vw;
+    }
+    .new-hero,
+    .register-hero,
+    .branch-hero {
+        min-height: 57.8125vw;
+    }
+}
