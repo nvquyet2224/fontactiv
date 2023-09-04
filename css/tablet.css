@@ -9,9 +9,8 @@
 
   .header-top,
   .header-bot,
-  .footer-top,
-  .footer-bot {
-    padding: 0 6.944444444444444%;
+  .footer-wrap {
+    padding: 0 2.604166666666667%;
   }
 
   .header-top {
@@ -20,23 +19,28 @@
   }
 
   .logo {
-    width: 23.06451612903226%;
+    width: 19.79166666666667vw;
+    margin-right: 9.270833333333333vw;
+  }
+
+  .logo a {
+    display: block;
   }
 
   .search-box {
     width: 38.79032258064516%;
-    -webkit-border-radius: clamp(4px, 0.2777777777777778vw, 8px);
-    border-radius: clamp(4px, 0.2777777777777778vw, 8px);
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
   }
 
   .search-group {
-    -webkit-border-radius: clamp(4px, 0.2777777777777778vw, 8px);
-    border-radius: clamp(4px, 0.2777777777777778vw, 8px);
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
   }
 
   .search-input {
     font-size: 0.9722222222222222vw;
-    height: 3.055555555555556vw;
+    height: 3.02083333333333vw;
     line-height: 3.055555555555556vw;
     padding: 0 0.9027777777777778vw;
     width: calc(100% - 3.055555555555556vw);
@@ -48,25 +52,26 @@
   }
 
   .side-logo {
-    width: 26.12903225806452%;
+    width: 22.5vw;
+    margin-left: auto;
   }
 
   .logo-united {
-    flex: 0 0 50.61728395061728%;
-    max-width: 50.61728395061728%;
+    flex: 0 0 50.69444444444444%;
+    max-width: 50.69444444444444%;
   }
 
   .logo-grand {
-    flex: 0 0 42.28395061728395%;
-    max-width: 42.28395061728395%;
+    flex: 0 0 42.36111111111111%;
+    max-width: 42.36111111111111%;
   }
 
   .navigation {
-    padding: 2vw 0;
+    padding: 1.197916666666667vw 0;
   }
 
-  .nav li {
-    margin-right: 1.944444444444444vw;
+  .nav li:not(:last-child) {
+    margin-right: 1.927083333333333vw;
   }
 
   .nav li:last-child {
@@ -74,11 +79,22 @@
   }
 
   .nav li a {
-    font-size: 1.111111111111111vw;
+    display: block;
+    font-size: 1.041666666666667vw;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .header-support {
+    width: 32.29166666666667vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .register-but {
-    width: 21.93548387096774%;
+    width: 58.38709677419355%;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
   }
@@ -88,12 +104,16 @@
     transform: scale(0.9);
   }
 
+  .support-logo {
+    width: 35.32258064516129%;
+  }
+
   .section-title {
     margin-bottom: 2.1875vw;
   }
 
   h2 {
-    font-size: 3.333333333333333vw;
+    font-size: 3.125vw;
   }
   .register h2 {
     font-size: 2.8vw;
@@ -123,22 +143,28 @@
   }
 
   .main-product {
-    width: 37.70833333333333vw;
-    top: 5.208333333333333vw;
+    width: 42.39583333333333vw;
+    top: 4.166666666666667vw;
     left: 6.927083333333333vw;
   }
 
   .main-product h1 {
-    font-size: 2.1875vw;
+    font-size: 3.125vw;
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: 1.595833333333333vw;
+    line-height: 1.2;
+    margin-bottom: 1.5625vw;
   }
 
   .main-product h2 {
     font-size: 1.354166666666667vw;
     line-height: 1.5;
     text-align: center;
+  }
+
+  .main-product .products {
+    justify-content: center;
+    width: 91.27764127764128%;
   }
 
   .main-product .product {
@@ -150,24 +176,32 @@
     margin-bottom: 1.595833333333333vw;
   }
 
+  .main-product .product-pic img {
+    width: 82%;
+  }
+
   .home-complete .product-intro {
     right: 6.927083333333333vw;
-    top: 13.29166666666667vw;
+    top: 11.29166666666667vw;
   }
 
   .home-diabest .product-intro {
     left: 6.927083333333333vw;
-    top: 22.29166666666667vw;
+    top: 19.29166666666667vw;
   }
 
   .product-intro {
-    width: 31.35416666666667vw;
-    font-size: 1.354166666666667vw;
+    width: 33.33333333333333vw;
+    font-size: 1.458333333333333vw;
+  }
+
+  .product-intro h3 {
+    font-size: 1.666666666666667vw;
   }
 
   .product-intro .products {
     align-items: flex-end;
-    margin-bottom: 0.3vw;
+    margin-bottom: 0.541666666666667vw;
   }
 
   .product-intro .product {
@@ -185,7 +219,7 @@
   }
 
   .product-intro .product-pic {
-    margin-bottom: 1.295833333333333vw;
+    margin-bottom: 0.695833333333333vw;
   }
 
   .product-intro .product-name {
@@ -193,11 +227,15 @@
   }
 
   .product-intro .logo-product {
-    width: 67.33001658374793%;
+    width: 63.33001658374793%;
+  }
+
+  .product-intro.product-intro.size-full .logo-product {
+    width: 81.81818181818182%;
   }
 
   .product-intro .buts {
-    padding-top: 1.041666666666667vw;
+    padding-top: 2.604166666666667vw;
   }
 
   .product-intro.size-full {
@@ -216,45 +254,92 @@
   }
 
   .product-intro.size-full .product-info {
-    flex: 0 0 40.87916666666667%;
-    max-width: 40.87916666666667%;
+    flex: 0 0 34.375vw;
+    max-width: 34.375vw;
   }
 
   .product-intro.size-full .product-info p {
     text-align: justify;
-    padding-top: 1.2vw;
-    margin-bottom: 4.375vw;
   }
 
   .sub-product {
-    width: 39.6875%;
-    top: 3.854166666666667vw;
-    right: 6.927083333333333vw;
+    left: 0;
+    top: 0;
+    width: 100%;
     height: 100%;
   }
 
   .sub-product--info {
-    text-align: right;
+    text-align: center;
     width: 100%;
+    margin: 0 auto;
+    padding-top: 1.875vw;
+  }
+
+  .sub-product--info h1,
+  .sub-product--info p {
+    line-height: 1.2;
   }
 
   .sub-product--info h1 {
-    font-size: 2.1875vw;
-    margin-bottom: 0.3755vw;
-    line-height: 1.5;
+    font-size: 3.125vw;
+    padding: 0.5vw 0;
   }
 
   .sub-product--info p {
-    font-size: 1.354166666666667vw;
-    margin-bottom: 0.75vw;
+    font-size: 2.5vw;
   }
 
+  .sub-product--ingredient {
+    position: absolute;
+    right: 5.416666666666667vw;
+    bottom: 25.54166666666667vw;
+    width: 37.81624500665779%;
+    align-items: center;
+  }
+
+  .sub-product--ingredient .whey img {
+    width: 47.53661784287617%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .sub-product--ingredient .product {
+    width: 39.51624500665779%;
+  }
+
+  .sub-product--ingredient .product img {
+    width: 100%;
+  }
+
+  .ingredient--list {
+    flex: 0 0 60.18375499334221%;
+    max-width: 60.18375499334221%;
+    padding-left: 2.604166666666667vw;
+  }
+
+  .ingredient--item:not(:last-child) {
+    margin-bottom: 1.041666666666667vw;
+  }
+
+  .ingredient--icon {
+    flex: 0 0 4.0625vw;
+    max-width: 4.0625vw;
+  }
+
+  .ingredient--txt {
+    font-size: 1.458333333333333vw;
+    line-height: 1.2;
+    padding-left: 0.5208333333333333vw;
+  }
+
+  /*
   .sub-product .product {
     position: absolute;
     width: 43.35695538057743%;
     top: 16.40416666666667vw;
     left: 10.566666666666667vw;
-  }
+  }*/
 
   .specical__level {
     font-size: 1.666666666666667vw;
@@ -426,7 +511,7 @@
   .ingredient-elements {
     width: 77.2093023255814%;
     position: absolute;
-    top: 38vw;
+    top: 40vw;
     left: 12.944444%;
     display: flex;
     margin: 0 auto;
@@ -434,42 +519,61 @@
   }
 
   .ingredient-main {
-    width: 71.91265060240964%;
+    width: 53.07291666666667vw;
+  }
+
+  .elements-box .whey {
+    position: absolute;
+    width: 24.79166666666667vw;
+    left: 5.4%;
+    top: 0;
+    -webkit-transform: translateY(-30%);
+    transform: translateY(-30%);
   }
 
   .ingredient-element {
-    width: 12.566265%;
+    width: 10.72916666666667vw;
   }
 
-  .ingredient-element--quality {
-    width: 20.39759036144578%;
-    left: 13%;
-    top: -4%;
+  .ingredient-element img {
+    width: 66.99029126213592%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .ingredient-element h3 {
+    font-size: 1.041666666666667vw;
   }
 
   .ingredient-element--1 {
-    left: 14.024096%;
-    top: 40.84304%;
+    left: 10.024096%;
+    top: 32.84304%;
   }
 
   .ingredient-element--2 {
-    left: 24.5%;
-    top: 63.24304%;
+    left: 21.5%;
+    top: 51.14304%;
   }
 
   .ingredient-element--3 {
-    left: 46.5%;
+    left: 34.5%;
     top: 57%;
   }
 
   .ingredient-element--4 {
-    left: 63.5%;
-    top: 49%;
+    left: 48.5%;
+    top: 48%;
   }
 
   .ingredient-element--5 {
+    left: 62%;
+    top: 38%;
+  }
+
+  .ingredient-element--6 {
     left: 73.5%;
-    top: 29%;
+    top: 21%;
   }
 
   .ingredient-txt {
@@ -478,17 +582,15 @@
     bottom: 4%;
   }
 
+  .ingredient-table,
   .ingredient-elements,
   .ingredient-txt {
     -webkit-transition: all 1s;
     transition: all 1s;
   }
   .elements-box {
+    -webkit-transform: scale(0.8);
     transform: scale(0.8);
-  }
-  .ingredient-table {
-    -webkit-transition: all 1s;
-    transition: all 1s;
   }
 
   .show__table .ingredient-table {
@@ -550,7 +652,7 @@
   }
 
   .article-name {
-    font-size: 1.09375vw;
+    font-size: 1.041666666666667vw;
     margin-bottom: 0.8333333333333333vw;
   }
 
@@ -565,6 +667,21 @@
   }
 
   .article-items .article:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  .health-items {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .health-items .article {
+    flex: 0 0 23.41176470588235%;
+    max-width: 23.41176470588235%;
+    margin: 0 2.117647058823529% 2.117647058823529% 0;
+  }
+
+  .health-items .article:nth-child(4n) {
     margin-right: 0;
   }
 
@@ -715,12 +832,20 @@
 
   .product-use {
     height: 100%;
-    /* left: 2vw; */
   }
 
   .product-use .section-title {
-    top: 28vw;
+    top: 26vw;
     text-transform: uppercase;
+  }
+
+  .product-use .whey {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    top: 32vw;
+    position: absolute;
+    width: 24.79166666666667vw;
   }
 
   .use-quality {
@@ -747,14 +872,14 @@
   }
 
   .keysport--icon {
-    flex: 0 0 9.010416666666667vw;
-    max-width: 9.010416666666667vw;
+    flex: 0 0 7.1875vw;
+    max-width: 7.1875vw;
   }
 
   .keysport--txt {
     flex-grow: 1;
     line-height: 1.5;
-    font-size: 1.2902083333333333vw;
+    font-size: 1.458333333333333vw;
   }
 
   .keysport-post--item:nth-child(1),
@@ -765,8 +890,8 @@
 
   .keysport-post--item:nth-child(1) .keysport--icon,
   .keysport-post--item:nth-child(2) .keysport--icon,
-  .keysport-post--item:nth-child(3).keysport--icon {
-    margin-left: 0.5vw;
+  .keysport-post--item:nth-child(3) .keysport--icon {
+    margin-left: 1vw;
   }
 
   .keysport-post--item:nth-child(4),
@@ -778,8 +903,8 @@
 
   .keysport-post--item:nth-child(4) .keysport--icon,
   .keysport-post--item:nth-child(5) .keysport--icon,
-  .keysport-post--item:nth-child(6).keysport--icon {
-    margin-right: 0.5vw;
+  .keysport-post--item:nth-child(6) .keysport--icon {
+    margin-right: 1vw;
   }
 
   .keysport-post--item:nth-child(1) {
@@ -814,15 +939,15 @@
 
   .subject-use {
     height: 100%;
-    padding: 23vw 6.944444444444444% 0 6.944444444444444%;
+    padding: 18vw 6.944444444444444% 0 6.944444444444444%;
   }
 
   .subject-use .section-title {
-    margin-bottom: 3.729166666666667vw;
+    margin-bottom: 2.729166666666667vw;
   }
 
   .subject-use .section-title p {
-    font-size: 2.1875vw;
+    font-size: 3.125vw;
     text-align: center;
   }
 
@@ -833,6 +958,10 @@
 
   .subject-swiper {
     margin-bottom: 2.5vw;
+  }
+
+  .subject-swiper .swiper-slide {
+    margin-top: 0 !important;
   }
 
   .subject-pic {
@@ -854,7 +983,7 @@
   }
 
   .subject h3 {
-    font-size: 1.354166666666667vw;
+    font-size: 1.666666666666667vw;
     line-height: 1.5;
     text-align: center;
     letter-spacing: -0.05em;
@@ -867,6 +996,10 @@
 
   .instruction {
     padding: 30.5vw 6.944444444444444% 0 6.944444444444444%;
+  }
+
+  .instruction .section-title:nth-child(1) {
+    margin-bottom: 0;
   }
 
   .instruction .section-title {
@@ -885,7 +1018,8 @@
   }
 
   .how-use {
-    margin-bottom: 1.125vw;
+    margin-top: -1.5vw;
+    margin-bottom: 2.125vw;
   }
 
   .how-use--pic {
@@ -895,7 +1029,7 @@
   }
 
   .how-use--txt {
-    font-size: 1.354166666666667vw;
+    font-size: 1.458333333333333vw;
   }
 
   .how-make {
@@ -918,12 +1052,16 @@
   }
 
   .make-txt {
-    font-size: 1.354166666666667vw;
+    font-size: 1.458333333333333vw;
     padding-top: 0.3vw;
   }
 
   .cal {
     top: 2.8vw;
+  }
+
+  .make-item:nth-child(1) .cal {
+    top: 3.8vw;
   }
 
   .cal-mul {
@@ -938,8 +1076,8 @@
   }
 
   .shield-and-elder {
-    width: 43.21875vw;
-    right: 1.944444444444444%;
+    width: 37.41666666666667vw;
+    right: 0;
     bottom: 4.4vw;
   }
 
@@ -992,76 +1130,18 @@
   .otp__support,
   .resendOtp {
     font-size: 1.25vw;
-    text-align: center;
-  }
-
-  .resendOtp {
-    color: #4eabe9;
-    cursor: pointer;
-  }
-
-  .otp__list {
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   .input-otp {
-    border-bottom: 2px solid #d0d5dd;
-    color: #002d74;
-    font-weight: 700;
     font-size: 3.75vw;
     width: 3.90625vw;
-    text-align: center;
     margin: 0 0.5vw;
     padding: 5px 0;
-  }
-
-  .input-otp::placeholder {
-    color: #002d74;
-  }
-
-  .input-otp:-ms-input-placeholder {
-    color: #002d74;
-  }
-
-  .input-otp::-moz-placeholder {
-    color: #002d74;
-    opacity: 1;
-  }
-
-  .input-otp:focus {
-    color: #002d74;
-  }
-
-  .valid .input-otp {
-    border-color: #4eabe9;
-  }
-
-  .invalid .input-otp {
-    border-color: #ff0000;
   }
 
   .otp__list,
   .otp__message {
     margin-bottom: 1.5625vw;
-  }
-
-  .otp__error {
-    color: #ff0000;
-  }
-
-  .otp__error,
-  .otp__valid {
-    display: none;
-  }
-
-  .otp__message.valid .otp__valid {
-    display: block;
-  }
-
-  .otp__message.invalid .otp__error {
-    display: block;
   }
 
   .form-box .swiper-slide {
@@ -1070,14 +1150,8 @@
   }
 
   .question__number {
-    position: relative;
-    font-weight: 700;
-    color: #fff;
     font-size: 1.458333333333333vw;
     height: 4.322916666666667vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 0 3.75vw;
     -webkit-border-radius: 1.666666666666667vw 0 1.666666666666667vw 0;
     border-radius: 1.666666666666667vw 0 1.666666666666667vw 0;
@@ -1086,181 +1160,76 @@
 
   .question__order {
     font-size: 1.666666666666667vw;
-    font-weight: 700;
-  }
-
-  .questtion__item {
-    display: flex;
   }
 
   .order {
     flex: 0 0 2.683333333333333vw;
     max-width: 2.683333333333333vw;
     height: 2.683333333333333vw;
-    padding: 2px;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
   }
 
   .order span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #fff;
-    width: 100%;
-    height: 100%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    color: #002d74;
-    font-weight: 700;
     font-size: 1.458333333333333vw;
   }
 
   .info {
     padding-left: 1.666666666666667vw;
-    flex-grow: 1;
+    flex: 0 0 calc(100% - 2.683333333333333vw);
+    max-width: calc(100% - 2.683333333333333vw);
   }
 
   .title {
-    font-weight: 700;
-    color: #002d74;
     font-size: 1.666666666666667vw;
     margin-bottom: 1.279166666666667vw;
   }
 
-  .radio__box {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
   .radio__item {
-    display: flex;
-    flex: 0 0 50%;
-    max-width: 50%;
     margin-bottom: 1.279166666666667vw;
-    align-items: center;
   }
 
-  .radio__item.is__full {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-
-  .answer {
-    position: relative;
-    width: 100%;
+  .radio__item > .area__input {
+    max-width: 44vw;
   }
 
   .area__input {
-    position: relative;
-    display: block;
-    width: 100%;
-    border: 1px solid #d7d7d7;
     -webkit-border-radius: clamp(25px, 5.208333333333333vw, 40px);
     border-radius: clamp(25px, 5.208333333333333vw, 40px);
-    font-weight: 500;
-    color: #000;
     font-size: 1.166666666666667vw;
     padding: 1vw 1.5vw;
     line-height: 1.2;
-    padding-right: 6vw;
-    outline: none;
-  }
-
-  .area__input:focus {
-    border: 1px solid #d7d7d7;
-  }
-
-  [contentEditable="true"]:empty:not(:focus):before {
-    content: attr(data-text);
-    color: #a7a7a7;
+    padding-right: 7vw;
   }
 
   .radio__item .area__input {
-    flex-grow: 1;
     margin-left: 0.8333333333333333vw;
     padding-right: 1.5vw;
   }
 
   .area__limited {
-    position: absolute;
     right: 1.5vw;
     top: 0.75vw;
-    color: #a7a7a7;
-    font-weight: 700;
     font-size: 1.25vw;
   }
 
   .radio-input {
-    position: relative;
     flex: 0 0 1.666666666666667vw;
     width: 1.666666666666667vw;
     max-width: 1.666666666666667vw;
     height: 1.666666666666667vw;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    border: 1px solid #002d74;
-    cursor: pointer;
   }
 
   .radio__caption {
-    font-weight: 700;
-    color: #002d74;
     font-size: 1.25vw;
     padding-left: 0.8333333333333333vw;
-    cursor: pointer;
-    flex: 0 0 auto;
-  }
-
-  .radio-input::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #002d74;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    -webkit-transform: scale(0.6);
-    transform: scale(0.6);
-    opacity: 0;
-    -webkit-transition: opacity 0.3s ease;
-    transition: opacity 0.3s ease;
   }
 
   .input-number {
-    position: relative;
-    display: block;
-    width: 100%;
-    border: 1px solid #d7d7d7;
     -webkit-border-radius: clamp(25px, 5.208333333333333vw, 40px);
     border-radius: clamp(25px, 5.208333333333333vw, 40px);
-    font-weight: 500;
-    font-family: "Lovin Sans", sans-serif;
-    color: #000;
     font-size: 0.9375vw;
     padding: 1vw 1.5vw;
     line-height: 1.2;
     padding-right: 6vw;
-    outline: none;
-  }
-
-  .input-number::placeholder {
-    color: #a7a7a7;
-  }
-
-  .input-number:-ms-input-placeholder {
-    color: #a7a7a7;
-  }
-
-  .input-number::-moz-placeholder {
-    color: #a7a7a7;
-    opacity: 1;
-  }
-
-  .input-number:focus {
-    border-color: #d7d7d7;
   }
 
   .thank {
@@ -1274,10 +1243,6 @@
     font-size: 1.041666666666667vw;
     color: #002d74;
     text-align: center;
-  }
-
-  .radio-input:checked::before {
-    opacity: 1;
   }
 
   .breadcrumb {
@@ -1304,7 +1269,14 @@
   }
 
   .detail-content {
+    flex-wrap: wrap;
     justify-content: space-between;
+  }
+
+  .detail-content .buts {
+    width: 100%;
+    padding-right: 26.5vw;
+    padding-top: 4vw;
   }
 
   .new-detail {
@@ -1358,6 +1330,10 @@
     height: auto;
   }
 
+  .new-relation.promotion {
+    background-color: #fff;
+  }
+
   .new-relation h2 {
     font-size: 2.760416666666667vw;
     text-transform: capitalize;
@@ -1371,6 +1347,26 @@
 
   .new-relation .article:last-child {
     margin-bottom: 0;
+  }
+
+  .relation__box {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .relationSlider {
+    width: 100%;
+    height: auto;
+  }
+
+  .relation__box .swiper-wrapper {
+    transform: none !important;
+    flex-wrap: wrap;
+  }
+
+  .relation__box .swiper-slide:not(:last-child) {
+    margin-bottom: 2.004166666666667vw;
   }
 
   .branch {
@@ -1682,7 +1678,6 @@
   }
 
   .input-txt {
-    /* font-size: 1.666666666666667vw; */
     font-size: 1.166666666666667vw;
     padding: 1.09375vw 1.666666666666667vw;
     -webkit-border-radius: 6.927083333333333vw;
@@ -1699,7 +1694,6 @@
     display: flex;
     width: 100%;
     height: 100%;
-    /* font-size: 1.666666666666667vw; */
     font-size: 1.166666666666667vw;
     -webkit-border-radius: 6.927083333333333vw;
     border-radius: 6.927083333333333vw;
@@ -1757,6 +1751,358 @@
     cursor: pointer;
   }
 
+  .promotion .article-pic {
+    padding: clamp(2px, 0.4861111111111111vw, 7px);
+  }
+
+  .promotion .article-pic,
+  .promotion .article-pic .pic,
+  .promotion .article-pic .pic img {
+    -webkit-border-radius: 2.427083333333333vw;
+    border-radius: 2.427083333333333vw;
+  }
+
+  .news-box.promotion {
+    display: flex;
+  }
+
+  .news-box.promotion .article {
+    flex: 0 0 32%;
+    max-width: 32%;
+    margin: 0 2% 2% 0;
+  }
+
+  .news-box.promotion .article:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  .promotion .article .but {
+    width: 10vw;
+    margin: 0 auto;
+    margin-top: 1.302083333333333vw;
+  }
+
+  .promotion .article .but__txt {
+    padding: 0;
+    justify-content: center;
+  }
+
+  #whey-page {
+    background: url(../images/whey-g-bg.jpg) no-repeat center top;
+    background-size: 100% auto;
+  }
+
+  .middle-content--whey .middle-details {
+    width: 50%;
+    left: 6.927083333333333vw;
+    top: 11.29166666666667vw;
+  }
+
+  .middle-content--whey h1 {
+    font-size: 4.166666666666667vw;
+    margin-bottom: 2.083333333333333vw;
+  }
+
+  .middle-content--whey h2 {
+    font-size: 2.1875vw;
+    margin-bottom: 0.7291666666666667vw;
+  }
+
+  .middle-content--whey li {
+    font-size: 1.927083333333333vw;
+    margin-bottom: 0.7291666666666667vw;
+    background-size: 1.770833333333333vw auto;
+    padding-left: 2.395833333333333vw;
+  }
+
+  .factory-content {
+    padding: 0 4.166666666666667%;
+  }
+
+  .factory__box {
+    align-items: flex-end;
+  }
+
+  .factory__pic {
+    flex: 0 0 40.22727272727273%;
+    max-width: 40.22727272727273%;
+  }
+
+  .factory__pic img {
+    width: 110%;
+  }
+
+  .factory__txt {
+    flex: 0 0 59.77272727272727%;
+    max-width: 59.77272727272727%;
+    margin-left: auto;
+  }
+
+  .factory__txt h2 {
+    font-size: 2.1875vw;
+    margin-bottom: 1.041666666666667vw;
+  }
+
+  .factory__txt li {
+    font-size: 1.927083333333333vw;
+    margin-bottom: 2.083333333333333vw;
+  }
+
+  .number__order li p {
+    padding-left: 0.9375vw;
+  }
+
+  .factory__order {
+    flex: 0 0 3.145833333333333vw;
+    max-width: 3.145833333333333vw;
+    height: 3.145833333333333vw;
+    padding: 2px;
+  }
+
+  .factory__order span {
+    font-size: 1.1875vw;
+  }
+
+  .number__order {
+    padding-bottom: 1vw;
+  }
+
+  .circle__list li {
+    background-position: left 0.675vw;
+    background-size: 1.25vw auto;
+    padding-left: 3.229166666666667vw;
+  }
+
+  .compare-content {
+    padding: 0 9.41666666666667%;
+  }
+
+  .compare__pic {
+    width: 51.2%;
+    margin: 0 auto;
+    padding: 3.958333333333333vw 0;
+  }
+
+  .compare__txt h2 {
+    font-size: 2.1875vw;
+    margin-bottom: 1.041666666666667vw;
+  }
+
+  .compare__txt {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5vw;
+    font-size: 1.927083333333333vw;
+  }
+
+  .compare__items {
+    justify-content: space-between;
+    margin-bottom: 7.1875vw;
+  }
+
+  .compare__item {
+    flex: 0 0 47.8%;
+    max-width: 47.8%;
+    padding: 3.645833333333333vw 1.979166666666667vw;
+    font-size: 1.927083333333333vw;
+  }
+
+  .compare__item h3 {
+    margin-bottom: 2.604166666666667vw;
+    font-size: 2.1875vw;
+  }
+
+  .compare__item p:not(:last-child) {
+    margin-bottom: 2.604166666666667vw;
+  }
+
+  .contain-content {
+    padding: 0 7.1875%;
+  }
+
+  .contain__box {
+    padding-top: 5.729166666666667vw;
+  }
+
+  .contain__box h2 {
+    font-size: 2.395833333333333vw;
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 1.875vw;
+  }
+
+  .contain__txt {
+    flex: 0 0 30.25210084033613%;
+    max-width: 30.25210084033613%;
+    font-size: 1.827083333333333vw;
+    text-align: justify;
+    margin-left: 5.042016806722689%;
+  }
+
+  .contain__txt:nth-child(2) {
+    margin-left: 0;
+  }
+
+  .immunoglobins {
+    flex: 0 0 29.59183673469388%;
+    max-width: 29.59183673469388%;
+    margin-left: auto;
+    margin-top: -3.5vw;
+  }
+
+  .whey-contain {
+    padding-top: 9.479166666666667vw;
+    padding-bottom: 6.25vw;
+  }
+
+  .whey-contain img {
+    width: 68.12725090036014%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .type-content {
+    padding: 3.645833333333333vw 7.1875% 5.625vw 7.1875%;
+    background-color: #e5f7ff;
+  }
+  .type__items {
+    justify-content: space-between;
+  }
+  .type__item:nth-child(1) {
+    flex: 0 0 34.57382953181273%;
+    max-width: 34.57382953181273%;
+  }
+  .type__item:nth-child(2) {
+    flex: 0 0 28.93157262905162%;
+    max-width: 28.93157262905162%;
+  }
+  .type__item:nth-child(3) {
+    flex: 0 0 28.93157262905162%;
+    max-width: 28.93157262905162%;
+  }
+
+  .type__box h2 {
+    font-size: 2.1875vw;
+    margin-bottom: 1.5625vw;
+  }
+
+  .type__item h3,
+  .type__item p {
+    font-size: 1.927083333333333vw;
+    margin-bottom: 1.916666666666667vw;
+  }
+  .type__item p {
+    text-align: justify;
+  }
+
+  .type__icon {
+    width: 2.65625vw;
+    margin-bottom: 3.125vw;
+  }
+
+  .type__pic img {
+    position: relative;
+    width: 80%;
+    left: -10%;
+  }
+
+  .benefit-content {
+    padding: 5.625vw 8.333333333333333% 16.66666666666667vw 8.333333333333333%;
+    background: url(../images/benefit_bg.jpg) no-repeat center bottom;
+    background-size: cover;
+  }
+
+  .benefit__title {
+    padding: 1.979166666666667vw 5.1875vw;
+    -webkit-border-radius: 1.527777777777778vw 0 1.527777777777778vw 0;
+    border-radius: 1.527777777777778vw 0 1.527777777777778vw 0;
+    max-width: 94%;
+    margin: 0 auto;
+    margin-bottom: 5.9375vw;
+  }
+  .benefit__title h2 {
+    font-size: 2.1875vw;
+  }
+
+  .benefit__item {
+    margin-bottom: 9.895833333333333vw;
+  }
+
+  .benefit__pic {
+    flex: 0 0 33.1875%;
+    max-width: 33.1875%;
+  }
+
+  .benefit__pic,
+  .benefit__pic .pic,
+  .benefit__pic .pic img {
+    -webkit-border-radius: 2.427083333333333vw;
+    border-radius: 2.427083333333333vw;
+  }
+
+  .benefit__pic {
+    padding: clamp(2px, 0.4861111111111111vw, 7px);
+  }
+
+  .benefit__txt {
+    flex-grow: 1;
+  }
+
+  .benefit__item h3 {
+    font-size: 2.1875vw;
+  }
+
+  .benefit__detail {
+    font-size: 1.927083333333333vw;
+    padding-top: 5.104166666666667vw;
+  }
+
+  .benefit__detail p:not(:last-child) {
+    margin-bottom: 2.020833333333333vw;
+  }
+
+  .benefit__detail::before {
+    left: 0;
+    top: 2.6vw;
+  }
+
+  .benefit__item:nth-child(1) {
+    align-items: center;
+  }
+  .benefit__item:nth-child(1) .benefit__pic {
+    right: 19%;
+  }
+  .benefit__item:nth-child(2) {
+    align-items: flex-start;
+  }
+  .benefit__item:nth-child(2) .benefit__txt {
+    padding-left: 14.25%;
+  }
+  .benefit__item:nth-child(3) {
+    align-items: flex-start;
+  }
+  .benefit__item:nth-child(3) .benefit__txt {
+    padding-right: 6.875%;
+  }
+
+  .benefit__contact {
+    -webkit-border-radius: 0.625vw;
+    border-radius: 0.625vw;
+    padding: 2.041666666666667vw 1.041666666666667vw;
+    justify-content: space-between;
+    max-width: 94%;
+    margin: 0 auto;
+  }
+
+  .benefit__contact ul {
+    flex: 0 0 48%;
+    max-width: 48%;
+  }
+
+  .benefit__contact ul li {
+    font-size: 0.8854166666666667vw;
+  }
+
   .footer-top {
     display: flex;
     align-items: flex-start;
@@ -1766,17 +2112,17 @@
   }
 
   .logo--bot {
-    width: 25.64516129032258%;
-    margin-right: 3.472222222222222vw;
+    width: 22.08333333333333vw;
+    margin-right: 3.4375vw;
   }
 
   .logo-united--bot {
-    width: 13.2258064516129%;
-    margin-right: 3.472222222222222vw;
+    width: 11.40625vw;
+    margin-right: 3.4375vw;
   }
 
   .logo-grand--bot {
-    width: 11.04838709677419%;
+    width: 9.53125vw;
   }
 
   .footer-bot {
@@ -1785,36 +2131,43 @@
   }
 
   .footer-bot--left {
-    flex: 0 0 33.2258064516129%;
-    max-width: 33.2258064516129%;
+    flex: 0 0 22.1875vw;
+    max-width: 22.1875vw;
+    margin-right: 3.4375vw;
   }
 
   .footer-bot--right {
-    flex: 0 0 66.7741935483871%;
-    max-width: 66.7741935483871%;
+    flex-grow: 1;
   }
 
   .subtitle {
-    font-size: 1.388888888888889vw;
+    font-size: 1.666666666666667vw;
     margin-bottom: 0.6944444444444444vw;
-  }
-
-  .footer-nav {
-    margin-bottom: 2.777777777777778vw;
   }
 
   .footer-nav li {
     position: relative;
-    margin-right: 1.666666666666667vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-nav li:not(:last-child) {
+    margin-right: 3.1375vw;
+  }
+
+  .footer-nav li a {
+    display: block;
+    text-align: center;
   }
 
   .footer-nav li::after {
     content: "";
     position: absolute;
-    right: -1vw;
-    top: -0.7vw;
-    width: 2px;
-    height: 2.472222222222222vw;
+    right: -1.6vw;
+    top: 0;
+    width: 1px;
+    height: 100%;
     background-color: #fff;
   }
 
@@ -1832,26 +2185,30 @@
 
   .footer-contact {
     display: flex;
-    margin-bottom: 1.388888888888889vw;
+    margin-top: 1.388888888888889vw;
   }
 
   .footer-contact--info,
   .footer-producer {
-    flex: 0 0 65.24390243902439%;
-    max-width: 65.24390243902439%;
+    flex-grow: 1;
     padding-right: 5%;
   }
 
   .footer-contact--hotline,
   .footer-socials {
-    flex: 0 0 34.75609756097561%;
-    max-width: 34.75609756097561%;
+    flex: 0 0 19.27083333333333vw;
+    max-width: 19.27083333333333vw;
   }
 
   .footer-contact--hotline {
     padding-top: 2.7vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
-
+  .origin-info {
+    padding-top: 2vw;
+  }
   .hotline li {
     display: flex;
     align-items: center;
@@ -1861,7 +2218,7 @@
   .hotline .icon {
     width: 1.666666666666667vw;
     height: auto;
-    margin-right: 1.805555555555556vw;
+    margin-right: 0.6770833333333333vw;
   }
 
   .hotline a {
@@ -1880,20 +2237,22 @@
 
   .footer-nav {
     display: flex;
+    justify-content: space-between;
   }
 
   .footer-nav a {
-    font-size: 0.9722222222222222vw;
+    font-size: 1.041666666666667vw;
     text-transform: uppercase;
+    font-weight: 500;
   }
 
   .socials li {
     display: flex;
-    margin-right: 1.916666666666667vw;
+    margin-right: 2.1875vw;
   }
 
   .socials a {
-    width: 4.433333333333333vw;
+    width: 4.375vw;
   }
 
   .footer-bot--left {
@@ -1903,28 +2262,27 @@
   }
 
   .video-box {
-    width: 76.89530685920578%;
+    width: 100%;
     margin-bottom: 1.458333333333333vw;
     -webkit-border-radius: 1.145833333333333vw;
     border-radius: 1.145833333333333vw;
   }
 
   .gov-box {
-    width: 66%;
+    width: 100%;
+  }
+
+  .gov-link {
+    width: 13.85416666666667vw;
+    display: block;
   }
 
   .copyright {
-    font-size: 1.458333333333333vw;
+    font-size: 1.09375vw;
     margin-bottom: 1.058333333333333vw;
   }
 
   .ingredient-close {
-    /* right: 2vw;
-    top: 1.5vw;
-    width: 1.5625vw;
-    height: 1.5625vw;
-    -webkit-transition: transform 0.3s;
-    transition: transform 0.3s; */
     right: 5px;
     top: 5px;
     width: 2vw;
@@ -1948,14 +2306,14 @@
     transition: transform 0.3s ease-in-out;
   }
 
-  .ingredient-but.show__table {
+  .show__table .ingredient-but {
     -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
   }
 
   .ingredient-top {
     width: 50.04166666666667%;
-    bottom: 6vw;
+    bottom: 7vw;
     right: 3.883333333333333%;
     text-align: left;
     font-size: 0.9375vw;

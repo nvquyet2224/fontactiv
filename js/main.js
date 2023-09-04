@@ -1,6 +1,13 @@
-// window.onbeforeunload = function () {
-//   window.scrollTo(0, 0);
-// }
+function lazyImg() {
+  const observer = lozad(".lozad", {
+    rootMargin: "500px 0px",
+    threshold: 0.1,
+    enableAutoReload: true,
+  });
+  observer.observe();
+}
+
+lazyImg();
 
 var swiperRegister;
 var gameStep = 0;
@@ -276,7 +283,7 @@ $(document).on("click", ".select__box li", function (e) {
 });
 
 $(document).on("click", ".ingredient-but, .ingredient-close", function (e) {
-  $(".ingredient, .ingredient-but").toggleClass("show__table");
+  $(".ingredient-content").toggleClass("show__table");
 });
 
 $(document).on("click touchstart", function (event) {
@@ -357,14 +364,14 @@ function expertSwiper() {
           },
         },
         1024: {
-          slidesPerView: 4,
+          slidesPerView: 3,
           spaceBetween: 22,
           grid: {
             rows: 1,
           },
         },
         1440: {
-          slidesPerView: 4,
+          slidesPerView: 3,
           spaceBetween: 34,
           grid: {
             rows: 1,
@@ -431,6 +438,27 @@ function promotionSwiper() {
   }
 }
 
+function heroSwiper() {
+  if ($(".heroSlider").length) {
+    new Swiper(".heroSlider", {
+      effect: "slide",
+      speed: 800,
+      loop: false,
+      watchOverflow: true,
+      grabCursor: true,
+      slidesPerView: 1,
+      spaceBetween: 0,
+      grid: {
+        rows: 1,
+      },
+      pagination: {
+        el: ".hero__box .swiper-pagination",
+        clickable: true,
+      }
+    });
+  }
+}
+
 function subjectSwiper() {
   if ($(".subject-swiper").length) {
     new Swiper(".subject-swiper", {
@@ -442,13 +470,24 @@ function subjectSwiper() {
       autoplay: {
         delay: 3000,
       },
+      grid: {
+        rows: 2,
+      },
+      spaceBetween: 30,
+      slidesPerView: 1.4,
       breakpoints: {
         1024: {
-          slidesPerView: 4,
+          grid: {
+            rows: 1,
+          },
+          slidesPerView: 3.2,
           spaceBetween: 22,
         },
         1440: {
-          slidesPerView: 4,
+          grid: {
+            rows: 1,
+          },
+          slidesPerView: 3.2,
           spaceBetween: 34,
         },
       },
@@ -463,6 +502,43 @@ function subjectSwiper() {
     });
   }
 }
+
+
+function relationSwiper() {
+  if ($(".relationSlider").length) {
+    new Swiper(".relationSlider", {
+      effect: "slide",
+      speed: 800,
+      loop: false,
+      watchOverflow: true,
+      grabCursor: true,
+      autoplay: {
+        delay: 3000,
+      },
+      grid: {
+        rows: 1,
+      },
+      spaceBetween: 30,
+      slidesPerView: 1.2,
+      breakpoints: {
+        1024: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+          grid: {
+            rows: 1,
+          },
+        },
+      },
+      pagination: {
+        el: ".relation__box .swiper-pagination",
+        clickable: true,
+      },
+    });
+  }
+}
+
+
+
 
 function countOtp() {
   $(".resendOtp").removeClass("isRetry");
@@ -694,7 +770,7 @@ $(document).on("click", ".resendOtp", function () {
   }
 });
 
-var timer = 500;
+var timer = 100;
 let lastMove = Date.now() - timer;
 
 function onScroll() {
@@ -705,10 +781,10 @@ function onScroll() {
       var elmH = $(elm).innerHeight();
       var eTop = $(elm).offset().top + elmH;
 
-      if (eTop - scrollTop > 100 && eTop - scrollTop <= windowH + elmH) {
+      if (eTop - scrollTop > 200 && eTop - scrollTop <= windowH + elmH) {
         $(elm).addClass("play");
       } else {
-        $(elm).removeClass("play");
+        //$(elm).removeClass("play");
       }
     });
     lastMove = Date.now();
@@ -754,6 +830,18 @@ $(".search-input").keyup(function (e) {
   }
 });
 
+function openMenu() {
+  $(document).on("click", ".nav-but", function () {
+    $("body").addClass("open__menu");
+  });
+}
+
+function closeMenu() {
+  $(document).on("click", ".close__menu", function () {
+    $("body").removeClass("open__menu");
+  });
+}
+
 $(window).on("scroll", onScroll);
 
 (function () {
@@ -763,9 +851,12 @@ $(window).on("scroll", onScroll);
   promotionSwiper();
   subjectSwiper();
   registerSwiper();
+  relationSwiper();
+  heroSwiper();
   inputHolder();
-  onScroll();
+  openMenu();
+  closeMenu();
   setTimeout(function () {
-    ingredientScroll();
-  }, 3000);
+    onScroll();
+  }, 100);
 })();
