@@ -454,7 +454,7 @@ function heroSwiper() {
       pagination: {
         el: ".hero__box .swiper-pagination",
         clickable: true,
-      }
+      },
     });
   }
 }
@@ -503,7 +503,6 @@ function subjectSwiper() {
   }
 }
 
-
 function relationSwiper() {
   if ($(".relationSlider").length) {
     new Swiper(".relationSlider", {
@@ -536,9 +535,6 @@ function relationSwiper() {
     });
   }
 }
-
-
-
 
 function countOtp() {
   $(".resendOtp").removeClass("isRetry");
@@ -787,6 +783,15 @@ function onScroll() {
         //$(elm).removeClass("play");
       }
     });
+
+    if ($(".header").length) {
+      if (scrollTop > $(".header").height() / 1.5) {
+        $(".header").addClass("fixed");
+      } else {
+        $(".header").removeClass("fixed");
+      }
+    }
+
     lastMove = Date.now();
   }
 }

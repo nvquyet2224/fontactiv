@@ -2210,7 +2210,7 @@ input[type="number"] {
   display: flex;
   flex-wrap: wrap;
   color: #002d74;
-  border:2px solid #dfd07c;
+  border: 2px solid #dfd07c;
 }
 
 .benefit__contact ul {
@@ -2220,7 +2220,6 @@ input[type="number"] {
   word-break: break-all;
   line-height: 1.2;
 }
-
 
 @supports (-webkit-text-stroke: green) {
   .gr-purple-color {
@@ -2476,6 +2475,34 @@ input[type="number"] {
   }
 }
 
+@-webkit-keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(30px);
+    transform: translateX(30px);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(30px);
+    transform: translateX(30px);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
 .main-product h1,
 .product .product-pic,
 .product h2,
@@ -2501,7 +2528,9 @@ input[type="number"] {
 .branch-filter,
 .near-location,
 .branch-box,
-.ingredient-top {
+.ingredient-top,
+.product-info h3,
+.ingredient--item {
   opacity: 0;
 }
 
@@ -2580,6 +2609,11 @@ input[type="number"] {
   animation-delay: 0s;
 }
 
+.product-intro h3 {
+  -webkit-animation-delay: 0.05s;
+  animation-delay: 0.05s;
+}
+
 .product-info.play p {
   -webkit-animation-delay: 0.1s;
   animation-delay: 0.1s;
@@ -2596,7 +2630,8 @@ input[type="number"] {
 .product-info.play .buts,
 .section-title.play,
 .faq-box.play,
-.faq .buts.play {
+.faq .buts.play,
+.product-info.play h3 {
   -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
   -webkit-animation-duration: 1s;
@@ -2629,6 +2664,19 @@ input[type="number"] {
   animation-delay: 0.1s;
 }
 
+.ingredient--item:nth-child(1) {
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+.ingredient--item:nth-child(2) {
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+.ingredient--item:nth-child(3) {
+  -webkit-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+
 .sub-product.play .certification {
   -webkit-animation-delay: 0.5s;
   animation-delay: 0.5s;
@@ -2646,6 +2694,15 @@ input[type="number"] {
 .sub-product.play .lactose {
   -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.sub-product.play .ingredient--item {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: forwards;
@@ -3032,4 +3089,127 @@ input[type="number"] {
   opacity: 1;
   -webkit-animation: none;
   animation: none;
+}
+
+@keyframes Grown {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  to {
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15);
+  }
+}
+
+.whey img {
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-animation: Grown 1s ease-in-out infinite alternate;
+  animation: Grown 1s ease-in-out infinite alternate;
+}
+
+.paging {
+  padding:20px 0;
+}
+.paging,
+.paging ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.prev a,
+.next a {
+  position: relative;
+  display: flex;
+  width: 30px;
+  height: 30px;
+  background-color: #d7d7d7;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.paging ul a,
+.paging ul span {
+  display: flex;
+  width: 36px;
+  height: 36px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 36px;
+}
+
+.paging ul a {
+  background-color: #d7d7d7;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.header-support {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.header.fixed .header-support{
+  opacity: 1;
+  visibility: visible;
+}
+
+.paging ul a.active,
+.paging ul a:hover {
+  background-color: #0B2E69;
+  color: #fff;
+  cursor: pointer;
+}
+
+.prev,
+.next,
+.paging li {
+  margin: 0 20px;
+}
+
+.prev a::before,
+.next a::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-left: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  position: absolute;
+  border-color: #000;
+  -webkit-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+}
+.prev a::before {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.next a::before {
+  -webkit-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
+
+.prev a:hover,
+.next a:hover {
+  background-color: #0B2E69;
+}
+.prev a:hover::before,
+.next a:hover::before {
+  border-color: #fff;
 }
